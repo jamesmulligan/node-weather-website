@@ -21,7 +21,9 @@ const forecast = (latitude, longitude, callback) => {
           body.currently.temperature +
           " degrees and there is a " +
           body.currently.precipProbability * 100 +
-          "% chance of rain."
+          "% chance of rain. The max temperature today will be " +
+          body.daily.data[0].temperatureMax +
+          " degrees"
       );
     }
   });
