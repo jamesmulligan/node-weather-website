@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" href="./img/weather.png" />
+    <script>
+        function navToForecast() {
+            // var newLocation = document.getElementById("locationBox").value;
+            // window.location.assign("localhost:3000/weather?address=mayo");
+            window.location.assign("localhost:3000/weather?address=mayo");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main-content">
+        <h1>
+            {{>header}}
+        </h1>
+
+        <label for="fname">Enter Location</label>
+        <input type="text" id="locationBox"><br><br>
+        <input type="button" onclick="navToForecast()" value="Go to Google" />
+        <p>Forecast for {{location}}</p>
+        <p>{{forecast}}</p>
+    </div>
+    <p>{{>footer}}</p>
+</body>
+
+</html>
