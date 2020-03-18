@@ -66,8 +66,8 @@ app.get("/weather", (req, res) => {
           error: "The DarkSky weather service returned an error"
         });
       }
-      console.log("Forecast for " + result.location);
-      console.log(forecastData);
+      // console.log("Forecast for " + result.location);
+      // console.log(forecastData);
       res.send({
         title: "Weather Forecast",
         name: "Jim",
